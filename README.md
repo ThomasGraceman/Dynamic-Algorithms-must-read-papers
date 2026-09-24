@@ -16,3 +16,6 @@
 
 5. **Maximilian Probst Gutenberg and Christian Wulff-Nilsen** - *Fully-Dynamic All-Pairs Shortest Paths: Improved Worst-Case Time and Space Bounds*
    - *Explanation placeholder: Brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms.*
+
+6. **Mikkel Thorup** - *Worst-case update times for fully-dynamic all-pairs shortest paths* (2005)
+   - *Explanation placeholder: Brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms.*
