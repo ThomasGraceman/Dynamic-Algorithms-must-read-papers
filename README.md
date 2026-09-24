@@ -48,7 +48,7 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 
     *Jittat Fakcharoenphol, Satish Rao.*
 
-    Near-linear time (O(n log^3 n)) algorithm for shortest paths in planar graphs with arbitrary edge weights, including negative weights, a major improvement over earlier n^{3/2}-time algorithms. The main tool which allowed them to devise such an algorithm was the usage of planarity and the separation result in planar graphs. The separation allows them to design a data structure based on the divide-and-conquer method; there has been an extensive introduction based on a course by Erik Demaine and Jeff Erickson, which you can read.
+    Near-linear time (O(n log^3 n)) algorithm for shortest paths in planar graphs with arbitrary edge weights, including negative weights, a major improvement over earlier n^{3/2}-time algorithms. The main tool which allowed them to devise such an algorithm was the usage of planarity and the separation result in planar graphs. The separation allows them to design a data structure based on the divide-and-conquer method; there has been an extensive introduction on a course by Erik Demaine at MIT and another course on computational topology by Jeff Erickson, which you can read.
 
 2.  **Multiple-source shortest paths in planar graphs.** SODA 2005. [paper](https://doi.org/10.5555/1070432.1070454)
 
