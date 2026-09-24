@@ -1,8 +1,12 @@
 # Must-read papers on Dynamic Algorithms
 
-Dynamic Algorithms: All-Pairs Shortest Paths, Distance Oracles, and Planar Graphs.
+Dynamic Algorithms
 
-Contributed by Thomas Graceman.
+Contributed by Taha hoseinpour.
+
+Feel free to ask questions or add any paper to the list.
+
+The main focus here is on shortest path, maximum flow, ... problems in a dynamic setting, and more generally, dynamic graph problems.
 
 ## Content
 
@@ -16,13 +20,13 @@ Contributed by Thomas Graceman.
 
     *Mikkel Thorup, Uri Zwick.*
 
-    Introduces distance oracles: a data structure answering any distance query in O(1) time with stretch 2k−1, using only O(kn^{1+1/k}) space — the foundation for much of the later work on approximate shortest paths.
+    Introduces distance oracles: a data structure answering any distance query in O(1) time with stretch 2k−1, using only O(kn^{1+1/k}) space, and is the foundation for much of the later work on approximate shortest paths. Fundamentally, Thorup's underlying question was a question regarding the compactification of available data, using randomized sampling as a convenient tool.
 
 2.  **Dynamic approximate all-pairs shortest paths in undirected graphs.** FOCS 2004. [paper](https://ieeexplore.ieee.org/document/1366270)
 
     *Liam Roditty, Uri Zwick.*
 
-    First near-optimal dynamic algorithms for approximate all-pairs shortest paths: decremental and fully-dynamic algorithms with stretch guarantees obtained by dynamizing the Thorup–Zwick oracle.
+    First near-optimal dynamic algorithms for approximate all-pairs shortest paths: decremental and fully-dynamic algorithms with stretch guarantees obtained by dynamizing the Thorup–Zwick oracle. Their main insight, which can be used and has been used extensively, is to maintain a number of shallow data structures, here being the Even-Shiloach tree, to dynamically maintain the queries.
 
 ## [Fully-Dynamic All-Pairs Shortest Paths](#content)
 
@@ -30,7 +34,7 @@ Contributed by Thomas Graceman.
 
     *Mikkel Thorup.*
 
-    First fully-dynamic APSP algorithm with worst-case update time faster than recomputation from scratch (Õ(n^{2.75})), using a hierarchical graph decomposition.
+    First fully-dynamic APSP algorithm with worst-case update time faster than recomputation from scratch (Õ(n^{2.75})), using a hierarchical graph decomposition. The ideas and insights in these papers have been used extensively in later papers to obtain better worst-case times. If I am not mistaken, Saranurak has a talk on this method.
 
 2.  **Fully-dynamic all-pairs shortest paths: improved worst-case time and space bounds.** SODA 2020. [paper](https://arxiv.org/abs/2001.10801)
 
@@ -44,7 +48,7 @@ Contributed by Thomas Graceman.
 
     *Jittat Fakcharoenphol, Satish Rao.*
 
-    Near-linear time (O(n log^3 n)) algorithm for shortest paths in planar graphs with arbitrary edge weights, including negative weights — a major improvement over earlier n^{3/2}-time algorithms.
+    Near-linear time (O(n log^3 n)) algorithm for shortest paths in planar graphs with arbitrary edge weights, including negative weights, a major improvement over earlier n^{3/2}-time algorithms. The main tool which allowed them to devise such an algorithm was the usage of planarity and the separation result in planar graphs. The separation allows them to design a data structure based on the divide-and-conquer method; there has been an extensive introduction based on a course by Erik Demaine and Jeff Erickson, which you can read.
 
 2.  **Multiple-source shortest paths in planar graphs.** SODA 2005. [paper](https://doi.org/10.5555/1070432.1070454)
 
