@@ -1,40 +1,41 @@
-# Dynamic Algorithms: Must-Read Papers
+# Must-read papers on Dynamic Algorithms
 
-A curated list of foundational papers in **dynamic graph algorithms**, focused on
-all-pairs shortest paths (APSP), distance oracles, and planar graphs.
+Dynamic Algorithms: All-Pairs Shortest Paths, Distance Oracles, and Planar Graphs.
 
-Each entry has a short "Why it matters" section — feel free to add your own notes.
+Contributed by Thomas Graceman.
 
----
+## Content
 
-## Papers
+- [Distance Oracles and Approximate Shortest Paths](#distance-oracles-and-approximate-shortest-paths)
+- [Fully-Dynamic All-Pairs Shortest Paths](#fully-dynamic-all-pairs-shortest-paths)
+- [Shortest Paths in Planar Graphs](#shortest-paths-in-planar-graphs)
 
-### 1. Approximate Distance Oracles
-- **Authors:** Mikkel Thorup, Uri Zwick
-- **Year:** 2005
-- **Why it matters:** *(placeholder — brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms)*
+## [Distance Oracles and Approximate Shortest Paths](#content)
 
-### 2. Dynamic Approximate All-Pairs Shortest Paths in Undirected Graphs
-- **Authors:** Liam Roditty, Uri Zwick
-- **Year:** 2004
-- **Why it matters:** *(placeholder — brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms)*
+1.  **Approximate distance oracles.** Journal of the ACM 2005. [paper](https://doi.org/10.1145/1044731.1044732)
 
-### 3. Planar Graphs, Negative Weight Edges, Shortest Paths, and Near Linear Time
-- **Authors:** Jittat Fakcharoenphol, Satish Rao
-- **Year:** 2006
-- **Why it matters:** *(placeholder — brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms)*
+    *Mikkel Thorup, Uri Zwick.*
 
-### 4. Multiple-Source Shortest Paths in Planar Graphs
-- **Authors:** Philip N. Klein
-- **Year:** 2005
-- **Why it matters:** *(placeholder — brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms)*
+2.  **Dynamic approximate all-pairs shortest paths in undirected graphs.** FOCS 2004. [paper](https://ieeexplore.ieee.org/document/1366270)
 
-### 5. Fully-Dynamic All-Pairs Shortest Paths: Improved Worst-Case Time and Space Bounds
-- **Authors:** Maximilian Probst Gutenberg, Christian Wulff-Nilsen
-- **Year:** —
-- **Why it matters:** *(placeholder — brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms)*
+    *Liam Roditty, Uri Zwick.*
 
-### 6. Worst-Case Update Times for Fully-Dynamic All-Pairs Shortest Paths
-- **Authors:** Mikkel Thorup
-- **Year:** 2005
-- **Why it matters:** *(placeholder — brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms)*
+## [Fully-Dynamic All-Pairs Shortest Paths](#content)
+
+1.  **Worst-case update times for fully-dynamic all-pairs shortest paths.** STOC 2005. [paper](https://doi.org/10.1145/1060590.1060607)
+
+    *Mikkel Thorup.*
+
+2.  **Fully-dynamic all-pairs shortest paths: improved worst-case time and space bounds.** SODA 2020. [paper](https://arxiv.org/abs/2001.10801)
+
+    *Maximilian Probst Gutenberg, Christian Wulff-Nilsen.*
+
+## [Shortest Paths in Planar Graphs](#content)
+
+1.  **Planar graphs, negative weight edges, shortest paths, and near linear time.** Journal of Computer and System Sciences 2006. [paper](https://doi.org/10.1016/j.jcss.2005.05.007)
+
+    *Jittat Fakcharoenphol, Satish Rao.*
+
+2.  **Multiple-source shortest paths in planar graphs.** SODA 2005. [paper](https://doi.org/10.5555/1070432.1070454)
+
+    *Philip N. Klein.*
