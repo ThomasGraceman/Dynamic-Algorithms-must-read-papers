@@ -13,6 +13,7 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 - [Distance Oracles and Approximate Shortest Paths](#distance-oracles-and-approximate-shortest-paths)
 - [Fully-Dynamic All-Pairs Shortest Paths](#fully-dynamic-all-pairs-shortest-paths)
 - [Shortest Paths in Planar Graphs](#shortest-paths-in-planar-graphs)
+- [Dynamic Cuts, Distances, and Effective Resistances](#dynamic-cuts-distances-and-effective-resistances)
 
 ## [Distance Oracles and Approximate Shortest Paths](#content)
 
@@ -55,3 +56,11 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
     *Philip N. Klein.*
 
     Builds a data structure that answers distance queries from any vertex to boundary vertices of a planar graph in O(log n) time, by dynamically maintaining a shortest-path tree as the source slides along the boundary. A key building block for later planar algorithms.
+
+## [Dynamic Cuts, Distances, and Effective Resistances](#content)
+
+1.  **Fast dynamic cuts, distances and effective resistances via vertex sparsifiers.** FOCS 2021. [paper](https://arxiv.org/abs/2005.02368)
+
+    *Li Chen, Gramoz Goranci, Monika Henzinger, Richard Peng, Thatchaphol Saranurak.*
+
+    Explanation placeholder: Brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms.
