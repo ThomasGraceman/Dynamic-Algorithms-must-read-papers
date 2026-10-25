@@ -14,6 +14,7 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 - [Fully-Dynamic All-Pairs Shortest Paths](#fully-dynamic-all-pairs-shortest-paths)
 - [Shortest Paths in Planar Graphs](#shortest-paths-in-planar-graphs)
 - [Dynamic Cuts, Distances, and Effective Resistances](#dynamic-cuts-distances-and-effective-resistances)
+- [Talks: design templates](#talks-design-templates)
 
 ## [Distance Oracles and Approximate Shortest Paths](#content)
 
@@ -64,3 +65,25 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
     *Li Chen, Gramoz Goranci, Monika Henzinger, Richard Peng, Thatchaphol Saranurak.*
 
     Explanation placeholder: Brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms.
+
+## [Talks: design templates](#content)
+
+Thatchaphol Saranurak's tutorial on **design templates** for dynamic graph algorithms: reusable patterns for attacking many problems (vertex sparsifiers, black-box reductions to static primitives, and adversary models).
+
+1. **Graph Data Structures, Part 1.** Simons Institute (Data Structures and Optimization for Fast Algorithms Boot Camp, 2023). [video](https://www.youtube.com/watch?v=6BV8yUVrbug&list=PLgKuh-lKre130uhdi7B-3yCZfIxSB4MNn&index=2&t=2920s)
+
+    *Thatchaphol Saranurak.*
+
+    Sets up the dynamic-graph model (preprocess, then online updates and queries) and the template viewpoint: how to turn static structure into a data structure that can be maintained under updates.
+
+2. **Graph Data Structures, Part 2.** Simons Institute (Data Structures and Optimization for Fast Algorithms Boot Camp, 2023). [video](https://www.youtube.com/watch?v=rP-IU7NJKcI&list=PLgKuh-lKre130uhdi7B-3yCZfIxSB4MNn&index=4&t=2505s)
+
+    *Thatchaphol Saranurak.*
+
+    The vertex-sparsifier template, developed on min-max paths (MST + LCA closure of terminals). Shows how a sparsifier for a static problem becomes a black-box recipe for a dynamic algorithm.
+
+3. **Graph Data Structures, Part 3.** Simons Institute (Data Structures and Optimization for Fast Algorithms Boot Camp, 2023). [video](https://www.youtube.com/watch?v=7pUbd4dpigM&list=PLVw32sKsg0NuBGS8rqsRFxKAq5pYhzd2K&index=22)
+
+    *Thatchaphol Saranurak.*
+
+    Templates against different adversaries (oblivious vs adaptive): which design patterns from the literature apply to each, and how the interaction model changes what you can assume about the update sequence.
