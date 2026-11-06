@@ -18,6 +18,7 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 - [Dynamic Cuts, Distances, and Effective Resistances](#dynamic-cuts-distances-and-effective-resistances)
 - [Maximum Flow](#maximum-flow)
 - [Talks: design templates](#talks-design-templates)
+- [Talks: continuous methods](#talks-continuous-methods)
 
 ## Distance Oracles and Approximate Shortest Paths
 
@@ -120,3 +121,11 @@ Thatchaphol Saranurak's tutorial on **design templates** for dynamic graph algor
     *Thatchaphol Saranurak.*
 
     Templates against different adversaries (oblivious vs adaptive): which design patterns from the literature apply to each, and how the interaction model changes what you can assume about the update sequence.
+
+## Talks: continuous methods
+
+1. **Continuous Methods in Graph Algorithms (Part 2).** DIMACS CCICADA. [video](https://www.youtube.com/watch?v=ISsMYFt7z7k)
+
+    *Rasmus Kyng.*
+
+    Part 2 of Rasmus Kyng's tutorial on continuous methods in graph algorithms.
