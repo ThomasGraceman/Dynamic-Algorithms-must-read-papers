@@ -11,9 +11,12 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 ## Content
 
 - [Distance Oracles and Approximate Shortest Paths](#distance-oracles-and-approximate-shortest-paths)
+- [Compact Routing Schemes](#compact-routing-schemes)
+- [Dynamic Trees](#dynamic-trees)
 - [Fully-Dynamic All-Pairs Shortest Paths](#fully-dynamic-all-pairs-shortest-paths)
 - [Shortest Paths in Planar Graphs](#shortest-paths-in-planar-graphs)
 - [Dynamic Cuts, Distances, and Effective Resistances](#dynamic-cuts-distances-and-effective-resistances)
+- [Maximum Flow](#maximum-flow)
 
 ## [Distance Oracles and Approximate Shortest Paths](#content)
 
@@ -29,15 +32,37 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 
     First near-optimal dynamic algorithms for approximate all-pairs shortest paths: decremental and fully-dynamic algorithms with stretch guarantees obtained by dynamizing the Thorup–Zwick oracle. Their main insight, which can be used and has been used extensively, is to maintain a number of shallow data structures, here being the Even-Shiloach tree, to dynamically maintain the queries.
 
+## [Compact Routing Schemes](#content)
+
+1.  **Compact routing schemes.** SPAA 2001. [paper](https://doi.org/10.1145/378580.378581)
+
+    *Mikkel Thorup, Uri Zwick.*
+
+    Presents compact routing schemes for general weighted undirected networks that trade routing-table size against stretch, and introduces the landmark-based hierarchy that also underpins the Thorup–Zwick distance oracles.
+
+## [Dynamic Trees](#content)
+
+1.  **A data structure for dynamic trees.** STOC 1981. [paper](https://doi.org/10.1145/800076.802464)
+
+    *Daniel D. Sleator, Robert Endre Tarjan.*
+
+    Introduces link-cut trees and the splay-tree machinery behind them, supporting link, cut, and path operations on dynamic trees in O(log n) amortized time. A foundational data structure for dynamic graph algorithms.
+
 ## [Fully-Dynamic All-Pairs Shortest Paths](#content)
 
-1.  **Worst-case update times for fully-dynamic all-pairs shortest paths.** STOC 2005. [paper](https://doi.org/10.1145/1060590.1060607)
+1.  **A new approach to dynamic all pairs shortest paths.** Journal of the ACM 2004. [paper](https://doi.org/10.1145/1039488.1039492)
+
+    *Camil Demetrescu, Giuseppe F. Italiano.*
+
+    Gives a fully-dynamic APSP algorithm for directed graphs with non-negative real-valued edge weights, supporting updates in O(n^2 log^3 n) amortized time and distance queries in O(1) worst-case time. This substantially improved previous bounds and solved a long-standing open problem.
+
+2.  **Worst-case update times for fully-dynamic all-pairs shortest paths.** STOC 2005. [paper](https://doi.org/10.1145/1060590.1060607)
 
     *Mikkel Thorup.*
 
     First fully-dynamic APSP algorithm with worst-case update time faster than recomputation from scratch (Õ(n^{2.75})), using a hierarchical graph decomposition. The ideas and insights in these papers have been used extensively in later papers to obtain better worst-case times. If I am not mistaken, Saranurak has a talk on this method.
 
-2.  **Fully-dynamic all-pairs shortest paths: improved worst-case time and space bounds.** SODA 2020. [paper](https://arxiv.org/abs/2001.10801)
+3.  **Fully-dynamic all-pairs shortest paths: improved worst-case time and space bounds.** SODA 2020. [paper](https://arxiv.org/abs/2001.10801)
 
     *Maximilian Probst Gutenberg, Christian Wulff-Nilsen.*
 
@@ -59,8 +84,16 @@ The main focus here is on shortest path, maximum flow, ... problems in a dynamic
 
 ## [Dynamic Cuts, Distances, and Effective Resistances](#content)
 
-1.  **Fast dynamic cuts, distances and effective resistances via vertex sparsifiers.** FOCS 2021. [paper](https://arxiv.org/abs/2005.02368)
+1.  **Fast dynamic cuts, distances and effective resistances via vertex sparsifiers.** FOCS 2020. [paper](https://arxiv.org/abs/2005.02368)
 
     *Li Chen, Gramoz Goranci, Monika Henzinger, Richard Peng, Thatchaphol Saranurak.*
 
-    Explanation placeholder: Brief summary of the paper's significance, key contributions, and relevance to dynamic algorithms.
+    Introduces a general meta-theorem that turns any graph problem admitting a notion of *vertex sparsifier* into a dynamic data structure with sublinear update and query time. The new object is the *incremental vertex sparsifier*, measured by its *recourse* — how many edges change when a terminal is added — and stacking these into a hierarchy of depth ℓ costs an α^ℓ approximation factor, so a query is answered by running a static algorithm on the sparsest level. Instantiating the framework needs three ingredients: Madry's j-trees (built on Racke's oblivious routing) for cut-flow, a metric variant of them for distances that reinterprets Thorup–Zwick's distance oracle as a sparsifier, and random-walk based spectral vertex sparsifiers (Schur complements) for effective resistance. The payoff is fully dynamic all-pair max-flow/min-cut with O(log n log log n)-approximation in Õ(n^{2/3+o(1)}) amortized time against an oblivious adversary (Õ(m^{3/4}) against an adaptive one), fully dynamic approximate APSP and transshipment in Õ(n^{2/3+o(1)}) amortized time, and (1+ε)-approximate all-pair effective resistance in Õ(n^{2/3+o(1)}ε^{-O(1)}) amortized time, improving on the previous Õ(n^{5/6}ε^{-6}); a deterministic incremental (2r−1)-approximate APSP in Õ(m^{1/2}n^{1/r}) worst-case time follows as well. The approximation factors match the best known static oracle bounds, which the authors argue should be prioritized over running time, and an offline variant with Õ(m^{1/t+1}) average update and query time rules out conditional lower bounds for these approximations in the offline setting.
+
+## [Maximum Flow](#content)
+
+1.  **Maximum flow and minimum-cost flow in almost-linear time.** FOCS 2022. [paper](https://doi.org/10.1109/FOCS54457.2022.00064)
+
+    *Li Chen, Rasmus Kyng, Yang P. Liu, Richard Peng, Maximilian Probst Gutenberg, Sushant Sachdeva.*
+
+    Gives the first almost-linear-time (m^{1+o(1)}) algorithms for maximum flow and minimum-cost flow on directed graphs, resolving a long-standing open question by combining dynamic graph techniques, expander decompositions, and continuous optimization.
